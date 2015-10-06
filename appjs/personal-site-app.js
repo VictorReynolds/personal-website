@@ -1,28 +1,20 @@
-var app = angular.module('personal-site',['ngRoute']);
+var app = angular.module('personal-site',['ngRoute', 'ngAnimate']);
 
 app.config(['$locationProvider', '$routeProvider',
   function($locationProvider, $routeProvider) {
     $routeProvider
-      .when('/', {templateUrl: 'partials/main.html', activetab: 'home'})
-      .when('/projects', {templateUrl: 'partials/projects.html', activetab: 'projects'})
+      .when('/', {templateUrl: 'partials/main.html', activeTab: 'home'})
+      .when('/projects', {templateUrl: 'partials/projects.html', activeTab: 'projects'})
       .otherwise({redirectTo: "/"});
   }]);
 
 
-var content_locations = {
-	'home': './content/home.html',
-	'projects': './content/projects.html'
-}
+// var content_locations = {
+// 	'home': './content/home.html',
+// 	'projects': './content/projects.html'
+// }
 
-// app.controller('navigation_controller', ['$scope', '$location', function($scope, $location) {
-//   $scope.view = 'home';
+app.controller('navigation_controller', ['$scope', '$location', '$route', function($scope, $location, $route) {
+  $scope.activeTab = function() { return $route.current.activeTab; };
 
-//   $scope.content_from_view = function() {
-//   	return content_locations[$scope.view];
-//   };
-
-//   $scope.set_view = function(view_val) {
-//   	$scope.view = view_val;
-//   };
-
-// }]);
+}]);

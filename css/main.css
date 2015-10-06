@@ -8,7 +8,7 @@ body {
 }
 
 .img-body-center {
-  margin-top: 100px;
+  margin-top: 2em;
   display: block;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
   margin-left: auto;
@@ -16,28 +16,17 @@ body {
   width: 250px;
 }
 
-#title_contents h1, header h1 {
-  font-family: Quicksand, sans-serif;
+.title-contents h1, header h1 {
+  font-family: 'Quicksand', sans-serif;
   font-size: 26pt;
   text-align: center;
 }
 
-/*#body_contents, #title_contents {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-*/
-#body_contents {
+.body-contents {
   padding-bottom: 30px;
 }
 
-footer {
-  line-height: 30px;
-  text-align: center;
-}
-
-#body_contents p {
+.body-contents p {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -46,8 +35,12 @@ nav {
   text-align: center;
 }
 
+nav a {
+  position: relative;
+}
+
 nav a:link {
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora', sans-serif;
   list-style-type: none;
   display: inline-block;
   color: inherit;
@@ -61,15 +54,45 @@ nav a:visited {
   text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: none;
-  color: cornflowerblue;
-  transition: 0.2s;
+nav a:not(.active):hover::after {
+  content: '';
+  position: absolute;
+  top: 1.3em;
+  left: 0;
+  width: 50%;
+  margin-left: 25%;
+  height: 2px;
+  background-color: rgba(255, 245, 240, 0.8);
+  animation: fadein 0.5s;
 }
 
-nav a.active {
-  text-decoration: none;
-  color: cornflowerblue;
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  top: 1.3em;
+  left: 0;
+  width: 50%;
+  margin-left: 25%;
+  height: 2px;
+  background-color: rgba(255, 245, 240, 0.8);
+}
+
+footer {
+  line-height: 30px;
+  text-align: center;
+}
+
+.ng-enter { animation: fadeIn 0.3s both ease-in; z-index: 8888; }
+/*.ng-leave { animation: slideOutUp 0.5s both ease-in; z-index: 9999; }*/
+
+@keyframes fadeIn {
+    from    { opacity: 0; }
+    to      { opacity: 1; }
 }
 /*#nav_container {
   position: fixed;
