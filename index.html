@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="personal-site">
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+	<title>Victor Reynolds</title>
+
+	<!-- <base href="/personal-website/" /> -->
+	<meta name="description" content="Victor Reynolds, student of Computer Science and Arabic Language at USC" />
+	<link rel="shortcut icon" href="http://www.victorreynolds.net/favicon.ico" />
+	<!-- <link href='http://fonts.googleapis.com/css?family=Limelight|Righteous|Roboto+Slab|Audiowide|Oswald' rel='stylesheet' type='text/css'> -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link type="text/css" rel="stylesheet" href="css/footer.css" />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
+	<script src="./appjs/personal-site-app.js"></script>
+	
+</head>
+
+<body>
+	<div ng-include="'./templates/header.html'"></div>
+
+	<div ng-view></div>
+
+	<footer class="footer"><p>&copy; Victor Reynolds 2015</footer>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
