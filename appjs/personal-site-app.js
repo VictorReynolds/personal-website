@@ -8,12 +8,6 @@ app.config(['$locationProvider', '$routeProvider',
       .otherwise({redirectTo: "/"});
   }]);
 
-
-// var content_locations = {
-// 	'home': './content/home.html',
-// 	'projects': './content/projects.html'
-// }
-
 app.controller('navigation_controller', ['$scope', '$location', '$route', function($scope, $location, $route) {
   $scope.activeTab = function() { return $route.current.activeTab; };
 
