@@ -1,9 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand|Roboto+Slab|Lora);
+@import url(https://fonts.googleapis.com/css?family=Philosopher|Quicksand|Roboto+Slab|Lora);
 
 body {
   background-color: rgb(124, 169, 146);
-  color: rgb(255, 245, 240);
-  font-family: 'Roboto Slab', sans-serif;
   height: 100%;
 }
 
@@ -17,22 +15,28 @@ body {
 }
 
 .title-contents h1, header h1 {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 26pt;
+  font-family: 'Philosopher', sans-serif;
+  color: rgb(255, 245, 240);
+  font-size: 30pt;
   text-align: center;
 }
 
 .body-contents {
+  color: rgb(255, 245, 240);
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 14px;
   padding-bottom: 30px;
 }
 
-.body-contents p {
+.main .body-contents p {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
 nav {
   text-align: center;
+  margin-bottom: 1em;
+  color: rgb(255, 245, 240);
 }
 
 nav a {
@@ -63,12 +67,7 @@ nav a:not(.active):hover::after {
   margin-left: 25%;
   height: 2px;
   background-color: rgba(255, 245, 240, 0.8);
-  animation: fadein 0.5s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  animation: fadeIn 0.5s;
 }
 
 nav a.active::after {
@@ -84,6 +83,7 @@ nav a.active::after {
 
 footer {
   line-height: 30px;
+  color: rgb(255, 245, 240);
   text-align: center;
 }
 
@@ -94,60 +94,12 @@ footer {
     from    { opacity: 0; }
     to      { opacity: 1; }
 }
-/*#nav_container {
-  position: fixed;
-  margin: 0px;
-  padding: 0px;
-  top: 10px;
-  left: 0px;
-  list-style: none;
-  z-index:9999;
+
+.project-desc h2 {
+  width: 100%;
+  text-align: center;
 }
 
-#nav_container > li {
- width: 100px;
- text-align: center;
-}
-  
-#nav_container > li > a {
-  color: rgb(90, 116, 188);
-  font-family: Righteous, sans-serif;
-  font-size: 18pt;
-  text-decoration: none;
-  display: block;
-    margin-left: -2px;
-    width: 100px;
-    height: 50px;
-    line-height: 50px;
-    background-color:#CFCFCF;
-    background-repeat:no-repeat;
-    background-position:center center;
-    border:1px solid #AFAFAF;
-  opacity: 0.6;
- }
+.project-desc .short-desc {
 
-#nav_container ul {
-  list-style: none;
-  display: block;
-  position: absolute;
-  left: inherit;
 }
-
-#nav_container ul li {
-  text-align: left;
-}
-
-#nav_container ul a {
-  color: rgb(90, 116, 188);
-  text-decoration: none;
-  display: block;
-}
-
-#nav_container li.active a {
-  color: rgb(255, 245, 240);
-  cursor: default;
-}
- 
-#nav_container a::visited {
-  color: inherit;
-  }*/
